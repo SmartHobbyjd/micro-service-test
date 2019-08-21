@@ -1,0 +1,66 @@
+{
+  "name": "namor",
+  "version": "1.0.1",
+  "description": "A domain-safe name generator",
+  "author": "Jason Maurer",
+  "license": "MIT",
+  "homepage": "https://github.com/jsonmaur/namor#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jsonmaur/namor.git"
+  },
+  "keywords": [
+    "name",
+    "subdomain",
+    "generator",
+    "random",
+    "url",
+    "friendly",
+    "manly"
+  ],
+  "files": [
+    "assets/",
+    "dist/",
+    "data.json",
+    "license",
+    "readme.md"
+  ],
+  "main": "dist/index.js",
+  "scripts": {
+    "test:lint": "standard --verbose | snazzy",
+    "test:unit": "nyc mocha test -r babel-register",
+    "test:coverage": "nyc report -r=lcov",
+    "test": "npm run build:data && npm-run-all test:*",
+    "coveralls": "cat coverage/lcov.info | coveralls",
+    "build:data": "rm -f data.json && babel-node data/scripts/build",
+    "build:node": "rm -rf dist && babel src -d dist",
+    "build": "npm-run-all build:*",
+    "watch": "npm run build:node -- -w -s",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "6.18.0",
+    "babel-preset-latest": "6.16.0",
+    "babel-register": "6.18.0",
+    "chai": "3.5.0",
+    "coveralls": "2.11.15",
+    "glob": "7.1.1",
+    "mocha": "3.2.0",
+    "npm-run-all": "4.0.1",
+    "nyc": "10.1.2",
+    "snazzy": "6.0.0",
+    "source-map-support": "0.4.10",
+    "standard": "8.6.0"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  }
+}
