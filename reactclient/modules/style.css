@@ -1,0 +1,27 @@
+.Login {
+    margin: 0 auto;
+    margin-top: 70px;
+    max-width: 400px;
+    padding: 40px 40px;
+    background: #fff;
+}
+#app {
+    
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #F5F5F5;
+}
+.hearder-title {
+    text-align: center;
+}
+.btn-create {
+    margin: auto;
+}
+. input-box{
+    padding: 10px;
+
+}

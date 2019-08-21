@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+package crud;
+
+option go_package = "crudpb";
+
+
+message User {
+    string id = 1;
+    string name = 2;
+    string mid_name = 3;
+    string last_name = 4;
+    string user_name = 5;
+    string email = 6;
+    string cell_number = 7;
+    string imgs = 8;
+}
+
+
+message CreateUserReq {
+    User user = 1;
+}
+
+message CreateUserRes {
+    User user = 1;
+}
+
+message ReadUserReqById {
+    string id = 1;
+}
+
+message ReadUserRes {
+    User user = 1;
+}
+
+message UpdateUserReq {
+    User user = 1;
+}
+
+message UpdateUserRes {
+    User user = 1;
+}
+
+message DeleteUserReqById {
+    string id = 1;
+}
+
+message DeleteUserRes {
+    bool success = 1;
+}
+
+message ListUsersReq {}
+
+message ListUsersRes {
+    User user = 1;
+}
+ 
+
+service UserService {
+    rpc CreateUser(CreateUserReq) returns (CreateUserRes);
+    rpc ReadUser(ReadUserReqById) returns (ReadUserRes);
+    rpc UpdateUser (UpdateUserReq) returns (UpdateUserRes);
+    rpc DeleteUser (DeleteUserReqById) returns (DeleteUserRes);
+    rpc ListUsers(ListUsersReq) returns (stream ListUsersRes); 
+}
