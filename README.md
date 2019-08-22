@@ -9,7 +9,7 @@ the idea is to make out of it as I'll describe it.
 
 # To start UI ( please go to reactclient README file )
 
-For this example we are using React and to run it you need:
+For this example, we are using React and to run it you need:
 
  1.go to reactclient
  2.run : npm start
@@ -28,15 +28,15 @@ How to install golang server
 
 # here is your test
 
-So to make sure you have the know how, I will ask youto make:
+So to make sure you have the know-how, I will ask you to make:
 
-Any custum changes you want on .proto file, main.go file and at ui (you can use vue 
-if you want in this example it with a basic React ui ) but for your Clinet UI please
+Any custom changes you want on .proto file, main.go file and at UI (you can use vue 
+if you want in this example is with a basic React UI ) but for your Client UI please
 use Material UI (vue / React )
 
-You Can Remove any Document from db struct or add any extra. But hereis an idea:
+You Can Remove any Document from DB struct or add any extra. But here is an idea:
 
 remove imgs or cell_number, add a file upload a pet_name, a favorite_color or text_box
 
-for the db conection I have itin main.go file but make separeted connector if you like.
+for the DB connection, I have it in main.go file but make separated connector if you like.
 
