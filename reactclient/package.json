@@ -12,7 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@grpc-gen/protoc-gen-grpc-web": "^0.4.0",
-    "@grpc/grpc-js": "^0.3.6",
+    "@grpc/grpc-js": "^1.1.8",
     "@material-ui/core": "^4.3.2",
     "bootstrap": "^4.3.1",
     "compression": "^1.6.1",
